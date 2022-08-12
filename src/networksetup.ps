@@ -1,0 +1,20 @@
+#!/usr/bin/env polaris
+
+let networks() = {
+ !docker "network" "create" "SecAll"
+
+}
+
+let containers() = {
+  !docker "run" "-d" "-t" "--name" "magheretta_pc" "--network" "SecAll" "ubuntu"
+}
+
+
+let main() = {
+  networks()
+  containers()
+}
+
+#{
+  main: main
+}
