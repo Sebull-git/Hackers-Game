@@ -1,0 +1,11 @@
+#!/usr/bin/env polaris
+
+let build_containers() = {
+!docker "build" "-t" "sebull/andrey:latest" "src/container/Persons/Andrey_Segun/"
+!docker "build" "-t" "sebull/margheretta:latest" "src/container/Persons/Margheretta_Sandas/"
+!docker "build" "-t" "sebull/brice:latest" "src/container/Persons/Brice_Russel"
+}
+
+#{
+build_containers : build_containers
+}

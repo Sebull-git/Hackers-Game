@@ -7,8 +7,8 @@ RUN apt upgrade -y
 
 # Install
 
-RUN apt install openssh-server sudo -y
-RUN apt install iproute2 -y
+
+RUN apt install iproute2 sudo -y
 
 # User
 
@@ -33,8 +33,11 @@ RUN mkdir Templates
 RUN mkdir Videos
 
 WORKDIR /home/Andrey/Documents
-RUN mkdir -p Work/HighHill-IT/Pentests
+RUN mkdir -p Work/HighHill-IT/Pentests/
 WORKDIR /home/Andrey/Documents/HighHill-IT/Pentests
+ADD notes.md .
+
+
 
 # End
 USER Andrey

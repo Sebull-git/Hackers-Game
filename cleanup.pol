@@ -1,0 +1,19 @@
+#!/usr/bin/env polaris
+
+# Remove Containers
+
+# Andrey
+print((!docker "stop" "Andrey_PC")  ~ " deleted")
+print((!docker "rm" "Andrey_PC") ~ " deleted")
+
+# Margheretta
+print((!docker "stop" "Margheretta_PC")  ~ " deleted")
+print((!docker "rm" "Margheretta_PC") ~ " deleted")
+
+#Brice
+print((!docker "stop" "Brice_PC")  ~ " deleted")
+print((!docker "rm" "Brice_PC") ~ " deleted")
+
+
+# Network
+print((!docker "network" "remove" "SecAll") ~ " deleted")

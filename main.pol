@@ -1,0 +1,8 @@
+#!/usr/bin/env polaris
+
+let network = require("./src/networksetup.pol")
+let build = require("./src/containerbuild.pol")
+
+
+build.build_containers()
+network.main()
