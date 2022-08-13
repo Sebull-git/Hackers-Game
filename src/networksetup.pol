@@ -6,15 +6,19 @@ let networks() = {
 }
 
 let containers() = {
-  !docker "run" "-d" "-t" "--name" "Andrey_PC" "--network" "SecAll" "sebull/andrey"
-  !docker "run" "-d" "-t" "--name" "Margheretta_PC" "--network" "SecAll" "sebull/margheretta"
-  !docker "run" "-d" "-t" "--name" "Brice_PC" "--network" "SecAll" "sebull/brice"
+  #!docker "run" "-d" "-t" "--name" "Andrey_PC" "--network" "SecAll" "sebull/andrey"
+  #!docker "run" "-d" "-t" "--name" "Margheretta_PC" "--network" "SecAll" "sebull/margheretta"
+  #!docker "run" "-d" "-t" "--name" "Brice_PC" "--network" "SecAll" "sebull/brice"
 }
 
+let webserverContainer() = {
+  !docker "run" "-d" "-it" "--name" "allsec-web" "--network" "SecAll" "sebull/allsec-web"
+} 
 
 let main() = {
   networks()
   containers()
+  webserverContainer()
 }
 
 #{

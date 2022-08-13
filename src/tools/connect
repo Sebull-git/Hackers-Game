@@ -2,7 +2,7 @@
 
 
 !rm "-f" "container.txt"
-!bash "-c" "getIP.sh > container.txt"
+!bash "-c" "./getIP.sh > container.txt"
 
 let ip = (getArgv()[1])
 let name = ((!cat "container.txt") | grep ip)| cut "-d" ":" "-f1"

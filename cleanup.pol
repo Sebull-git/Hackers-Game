@@ -3,17 +3,20 @@
 # Remove Containers
 
 # Andrey
-print((!docker "stop" "Andrey_PC")  ~ " deleted")
-print((!docker "rm" "Andrey_PC") ~ " deleted")
+print(!docker "stop" "Andrey_PC")
+print(!docker "rm" "/Andrey_PC") 
 
 # Margheretta
-print((!docker "stop" "Margheretta_PC")  ~ " deleted")
-print((!docker "rm" "Margheretta_PC") ~ " deleted")
+print(!docker "stop" "Margheretta_PC")
+print(!docker "rm" "/Margheretta_PC")
 
-#Brice
-print((!docker "stop" "Brice_PC")  ~ " deleted")
-print((!docker "rm" "Brice_PC") ~ " deleted")
+# Brice
+print(!docker "stop" "Brice_PC")
+print(!docker "rm" "/Brice_PC")
 
+# Web - Allsec
+print(!docker "stop" "allsec-web")
+print(!docker "rm" "/allsec-web")
 
 # Network
-print((!docker "network" "remove" "SecAll") ~ " deleted")
+print(!docker "network" "remove" "SecAll")
