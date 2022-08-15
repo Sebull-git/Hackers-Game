@@ -12,12 +12,12 @@ RUN apt install iproute2 sudo -y
 
 # User
 
-RUN useradd -ms /bin/bash Andrey 
-RUN echo 'Andrey:password' | chpasswd
-RUN usermod -aG sudo Andrey
+RUN useradd -ms /bin/bash Albert 
+RUN echo 'Albert:password' | chpasswd
+RUN usermod -aG sudo Albert
 ## User Stuff
-USER Andrey
-WORKDIR /home/Andrey
+USER Albert
+WORKDIR /home/Albert
 
 
 ## Create Directorys
@@ -30,13 +30,13 @@ RUN mkdir Public
 RUN mkdir Templates
 RUN mkdir Videos
 
-WORKDIR /home/Andrey/Documents
-RUN mkdir -p Work/HighHill-IT/Pentests/
-WORKDIR /home/Andrey/Documents/HighHill-IT/Pentests
-ADD notes.md .
+WORKDIR /home/Albert/Documents
+RUN mkdir -p work/support/incidents/
+WORKDIR /home/Albert/Documents/work/support/incidents
+
 
 
 
 # End
-USER Andrey
-WORKDIR /home/Andrey
+USER Albert
+WORKDIR /home/Albert

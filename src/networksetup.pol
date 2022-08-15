@@ -2,13 +2,17 @@
 
 let networks() = {
  !docker "network" "create" "SecAll"
-
+ !docker "netwokr" "create" "HighHill-IT-Support"
 }
 
 let containers() = {
-  #!docker "run" "-d" "-t" "--name" "Andrey_PC" "--network" "SecAll" "sebull/andrey"
-  #!docker "run" "-d" "-t" "--name" "Margheretta_PC" "--network" "SecAll" "sebull/margheretta"
-  #!docker "run" "-d" "-t" "--name" "Brice_PC" "--network" "SecAll" "sebull/brice"
+ # All Sec IT Containers
+  !docker "run" "-d" "-t" "--name" "Andrey_PC" "--network" "SecAll" "sebull/andrey"
+  !docker "run" "-d" "-t" "--name" "Margheretta_PC" "--network" "SecAll" "sebull/margheretta"
+  !docker "run" "-d" "-t" "--name" "Brice_PC" "--network" "SecAll" "sebull/brice"
+
+ # HighHill IT support Containers
+ !docker "run" "-d" "-t" "--name" "Albert_PC" "--network" "HighHill-IT-Support" "sebull/albert"
 }
 
 let webserverContainer() = {
